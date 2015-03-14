@@ -1,0 +1,542 @@
+﻿Build started 14.02.2015 21:07:36.
+     1>Project "d:\coding\mpir+mpf+mpc\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         ..\out_copy_rename.bat ..\..\src\mpfr.h ..\..\lib\Win32\Release\ mpfr.h
+         ..\out_copy_rename.bat ..\..\src\mparam_h.in ..\..\ mparam.h
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I..\..\ /I..\..\src\ /I..\..\..\mpir\lib\Win32\Release\ /Zi /nologo /W2 /WX- /O2 /Oy- /GT /D WIN32 /D NDEBUG /D _LIB /D _WIN32 /D _GMP_IEEE_FLOATS /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MT /GS- /fp:strict /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\mpir+mpf+mpc\mpfr\lib\Win32\Release\mpfr.pdb" /Gd /TC /FIconfig.h /analyze- /errorReport:prompt ..\..\src\abort_prec_max.c ..\..\src\acos.c ..\..\src\acosh.c ..\..\src\add.c ..\..\src\add1.c ..\..\src\add1sp.c ..\..\src\add_d.c ..\..\src\add_ui.c ..\..\src\agm.c ..\..\src\ai.c ..\..\src\asin.c ..\..\src\asinh.c ..\..\src\atan.c ..\..\src\atan2.c ..\..\src\atanh.c ..\..\src\bernoulli.c ..\..\src\buildopt.c ..\..\src\cache.c ..\..\src\cbrt.c ..\..\src\check.c ..\..\src\clear.c ..\..\src\clears.c ..\..\src\cmp.c ..\..\src\cmp2.c ..\..\src\cmp_abs.c ..\..\src\cmp_d.c ..\..\src\cmp_ld.c ..\..\src\cmp_si.c ..\..\src\cmp_ui.c ..\..\src\comparisons.c ..\..\src\const_catalan.c ..\..\src\const_euler.c ..\..\src\const_log2.c ..\..\src\const_pi.c ..\..\src\constant.c ..\..\src\copysign.c ..\..\src\cos.c ..\..\src\cosh.c ..\..\src\cot.c ..\..\src\coth.c ..\..\src\csc.c ..\..\src\csch.c ..\..\src\d_div.c ..\..\src\d_sub.c ..\..\src\digamma.c ..\..\src\dim.c ..\..\src\div.c ..\..\src\div_2exp.c ..\..\src\div_2si.c ..\..\src\div_2ui.c ..\..\src\div_d.c ..\..\src\div_ui.c ..\..\src\dump.c ..\..\src\eint.c ..\..\src\eq.c ..\..\src\erf.c ..\..\src\erfc.c ..\..\src\exceptions.c ..\..\src\exp.c ..\..\src\exp10.c ..\..\src\exp2.c ..\..\src\exp3.c ..\..\src\exp_2.c ..\..\src\expm1.c ..\..\src\extract.c ..\..\src\factorial.c ..\..\src\fits_intmax.c ..\..\src\fits_sint.c ..\..\src\fits_slong.c ..\..\src\fits_sshort.c ..\..\src\fits_uint.c ..\..\src\fits_uintmax.c ..\..\src\fits_ulong.c ..\..\src\fits_ushort.c ..\..\src\fma.c ..\..\src\fms.c ..\..\src\frac.c ..\..\src\free_cache.c ..\..\src\frexp.c ..\..\src\gamma.c ..\..\src\gammaonethird.c ..\..\src\get_d.c ..\..\src\get_d64.c ..\..\src\get_exp.c ..\..\src\get_f.c ..\..\src\get_flt.c ..\..\src\get_ld.c ..\..\src\get_si.c ..\..\src\get_sj.c ..\..\src\get_str.c ..\..\src\get_ui.c ..\..\src\get_uj.c ..\..\src\get_z.c ..\..\src\get_z_exp.c ..\..\src\gmp_op.c ..\..\src\grandom.c ..\..\src\hypot.c ..\..\src\init.c ..\..\src\init2.c ..\..\src\inits.c ..\..\src\inits2.c ..\..\src\inp_str.c ..\..\src\int_ceil_log2.c ..\..\src\isinf.c ..\..\src\isinteger.c ..\..\src\isnan.c ..\..\src\isnum.c ..\..\src\isqrt.c ..\..\src\isregular.c ..\..\src\iszero.c ..\..\src\jn.c ..\..\src\li2.c ..\..\src\lngamma.c ..\..\src\log.c ..\..\src\log10.c ..\..\src\log1p.c ..\..\src\log2.c ..\..\src\logging.c ..\..\src\min_prec.c ..\..\src\minmax.c ..\..\src\modf.c "..\..\src\mpfr-gmp.c" ..\..\src\mp_clz_tab.c ..\..\src\mpn_exp.c ..\..\src\mul.c ..\..\src\mul_2exp.c ..\..\src\mul_2si.c ..\..\src\mul_2ui.c ..\..\src\mul_d.c ..\..\src\mul_ui.c ..\..\src\mulders.c ..\..\src\neg.c ..\..\src\next.c ..\..\src\out_str.c ..\..\src\pow.c ..\..\src\pow_ui.c ..\..\src\pow_z.c ..\..\src\powerof2.c ..\..\src\print_raw.c ..\..\src\print_rnd_mode.c ..\..\src\printf.c ..\..\src\rec_sqrt.c ..\..\src\reldiff.c ..\..\src\rem1.c ..\..\src\rint.c ..\..\src\root.c ..\..\src\round_near_x.c ..\..\src\round_p.c ..\..\src\round_prec.c ..\..\src\scale2.c ..\..\src\sec.c ..\..\src\sech.c ..\..\src\set.c ..\..\src\set_d.c ..\..\src\set_d64.c ..\..\src\set_dfl_prec.c ..\..\src\set_exp.c ..\..\src\set_f.c ..\..\src\set_flt.c ..\..\src\set_inf.c ..\..\src\set_ld.c ..\..\src\set_nan.c ..\..\src\set_prc_raw.c ..\..\src\set_prec.c ..\..\src\set_q.c ..\..\src\set_rnd.c ..\..\src\set_si.c ..\..\src\set_si_2exp.c ..\..\src\set_sj.c ..\..\src\set_str.c ..\..\src\set_str_raw.c ..\..\src\set_ui.c ..\..\src\set_ui_2exp.c ..\..\src\set_uj.c ..\..\src\set_z.c ..\..\src\set_zero.c ..\..\src\setmax.c ..\..\src\setmin.c ..\..\src\setsign.c ..\..\src\set_z_exp.c ..\..\src\sgn.c ..\..\src\si_op.c ..\..\src\signbit.c ..\..\src\sin.c ..\..\src\sin_cos.c ..\..\src\sinh.c ..\..\src\sinh_cosh.c ..\..\src\sqr.c ..\..\src\sqrt.c ..\..\src\sqrt_ui.c ..\..\src\stack_interface.c ..\..\src\strtofr.c ..\..\src\sub.c ..\..\src\sub1.c ..\..\src\sub1sp.c ..\..\src\sub_d.c ..\..\src\sub_ui.c ..\..\src\subnormal.c ..\..\src\sum.c ..\..\src\swap.c ..\..\src\tan.c ..\..\src\tanh.c ..\..\src\uceil_exp2.c ..\..\src\uceil_log2.c ..\..\src\ufloor_log2.c ..\..\src\ui_div.c ..\..\src\ui_pow.c ..\..\src\ui_pow_ui.c ..\..\src\ui_sub.c ..\..\src\urandom.c ..\..\src\urandomb.c ..\..\src\vasprintf.c ..\..\src\version.c ..\..\src\volatile.c ..\..\src\yn.c ..\..\src\zeta.c ..\..\src\zeta_ui.c ..\get_patches.c
+         abort_prec_max.c
+         acos.c
+         acosh.c
+         add.c
+         add1.c
+         add1sp.c
+     1>..\..\src\add1sp.c(111): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         add_d.c
+         add_ui.c
+         agm.c
+         ai.c
+         asin.c
+         asinh.c
+         atan.c
+         atan2.c
+         atanh.c
+         bernoulli.c
+         buildopt.c
+         cache.c
+     1>..\..\src\cache.c(106): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         cbrt.c
+         check.c
+         Generating Code...
+         Compiling...
+         clear.c
+         clears.c
+         cmp.c
+         cmp2.c
+         cmp_abs.c
+         cmp_d.c
+         cmp_ld.c
+         cmp_si.c
+     1>..\..\src\cmp_si.c(59): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         cmp_ui.c
+         comparisons.c
+         const_catalan.c
+         const_euler.c
+         const_log2.c
+         const_pi.c
+         constant.c
+         copysign.c
+         cos.c
+         cosh.c
+         cot.c
+         coth.c
+         Generating Code...
+         Compiling...
+         csc.c
+         csch.c
+         d_div.c
+         d_sub.c
+         digamma.c
+         dim.c
+         div.c
+     1>..\..\src\div.c(273): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         div_2exp.c
+         div_2si.c
+     1>..\..\src\div_2si.c(41): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         div_2ui.c
+     1>..\..\src\div_2ui.c(42): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         div_d.c
+         div_ui.c
+     1>..\..\src\div_ui.c(184): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         dump.c
+         eint.c
+     1>..\..\src\eint.c(270): warning C4244: '+=' : conversion from 'double' to 'mpfr_prec_t', possible loss of data
+         eq.c
+         erf.c
+         erfc.c
+         exceptions.c
+         exp.c
+         exp10.c
+         Generating Code...
+         Compiling...
+         exp2.c
+         exp3.c
+         exp_2.c
+     1>..\..\src\exp_2.c(121): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         expm1.c
+         extract.c
+     1>..\..\src\extract.c(54): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         factorial.c
+         fits_intmax.c
+     1>..\..\src\fits_intmax.c(65): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         fits_sint.c
+     1>d:\coding\mpir+mpf+mpc\mpfr\src\fits_s.h(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         fits_slong.c
+     1>d:\coding\mpir+mpf+mpc\mpfr\src\fits_s.h(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         fits_sshort.c
+         fits_uint.c
+         fits_uintmax.c
+         fits_ulong.c
+         fits_ushort.c
+         fma.c
+         fms.c
+         frac.c
+         free_cache.c
+         frexp.c
+         gamma.c
+         Generating Code...
+         Compiling...
+         gammaonethird.c
+         get_d.c
+         get_d64.c
+         get_exp.c
+         get_f.c
+         get_flt.c
+         get_ld.c
+         get_si.c
+         get_sj.c
+         get_str.c
+         get_ui.c
+         get_uj.c
+         get_z.c
+         get_z_exp.c
+     1>..\..\src\get_z_exp.c(62): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         gmp_op.c
+         grandom.c
+         hypot.c
+     1>..\..\src\hypot.c(120): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         init.c
+         init2.c
+         inits.c
+         Generating Code...
+         Compiling...
+         inits2.c
+         inp_str.c
+         int_ceil_log2.c
+         isinf.c
+         isinteger.c
+         isnan.c
+         isnum.c
+         isqrt.c
+         isregular.c
+         iszero.c
+         jn.c
+     1>..\..\src\jn.c(102): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         li2.c
+         lngamma.c
+         log.c
+         log10.c
+         log1p.c
+         log2.c
+         logging.c
+         min_prec.c
+         minmax.c
+         Generating Code...
+         Compiling...
+         modf.c
+         mpfr-gmp.c
+         mp_clz_tab.c
+         mpn_exp.c
+     1>..\..\src\mpn_exp.c(110): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         mul.c
+     1>..\..\src\mul.c(528): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         mul_2exp.c
+         mul_2si.c
+     1>..\..\src\mul_2si.c(41): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         mul_2ui.c
+         mul_d.c
+         mul_ui.c
+     1>..\..\src\mul_ui.c(106): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         mulders.c
+     1>..\..\src\mulders.c(245): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         neg.c
+         next.c
+     1>..\..\src\next.c(46): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\next.c(80): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         out_str.c
+         pow.c
+         pow_ui.c
+         pow_z.c
+         powerof2.c
+         print_raw.c
+         print_rnd_mode.c
+         Generating Code...
+         Compiling...
+         printf.c
+     1>..\..\src\printf.c(39): warning C4005: 'va_copy' : macro redefinition
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdarg.h(37) : see previous definition of 'va_copy'
+         rec_sqrt.c
+         reldiff.c
+         rem1.c
+         rint.c
+     1>..\..\src\rint.c(115): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         root.c
+         round_near_x.c
+     1>..\..\src\round_near_x.c(191): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         round_p.c
+         round_prec.c
+     1>..\..\src\round_prec.c(169): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\round_prec.c(174): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         scale2.c
+         sec.c
+         sech.c
+         set.c
+     1>..\..\src\set.c(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         set_d.c
+         set_d64.c
+         set_dfl_prec.c
+         set_exp.c
+         set_f.c
+         set_flt.c
+         set_inf.c
+         Generating Code...
+         Compiling...
+         set_ld.c
+         set_nan.c
+         set_prc_raw.c
+         set_prec.c
+         set_q.c
+         set_rnd.c
+         set_si.c
+         set_si_2exp.c
+     1>..\..\src\set_si_2exp.c(44): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\set_si_2exp.c(45): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         set_sj.c
+     1>..\..\src\set_sj.c(46): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         set_str.c
+         set_str_raw.c
+         set_ui.c
+         set_ui_2exp.c
+         set_uj.c
+         set_z.c
+         set_zero.c
+         setmax.c
+         setmin.c
+         setsign.c
+         set_z_exp.c
+     1>..\..\src\set_z_exp.c(91): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         Generating Code...
+         Compiling...
+         sgn.c
+         si_op.c
+         signbit.c
+         sin.c
+         sin_cos.c
+         sinh.c
+         sinh_cosh.c
+         sqr.c
+         sqrt.c
+     1>..\..\src\sqrt.c(87): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         sqrt_ui.c
+         stack_interface.c
+         strtofr.c
+     1>..\..\src\strtofr.c(398): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(571): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(584): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(588): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(631): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(635): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(668): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(703): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(707): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(782): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         sub.c
+         sub1.c
+     1>..\..\src\sub1.c(101): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\sub1.c(151): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\sub1.c(175): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         sub1sp.c
+     1>..\..\src\sub1sp.c(292): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\sub1sp.c(404): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\sub1sp.c(500): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         sub_d.c
+         sub_ui.c
+         subnormal.c
+     1>..\..\src\subnormal.c(134): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         sum.c
+         swap.c
+         Generating Code...
+         Compiling...
+         tan.c
+         tanh.c
+         uceil_exp2.c
+         uceil_log2.c
+         ufloor_log2.c
+         ui_div.c
+         ui_pow.c
+         ui_pow_ui.c
+         ui_sub.c
+         urandom.c
+         urandomb.c
+         vasprintf.c
+     1>..\..\src\vasprintf.c(40): warning C4005: 'va_copy' : macro redefinition
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdarg.h(37) : see previous definition of 'va_copy'
+     1>..\..\src\vasprintf.c(1018): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\vasprintf.c(1142): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         version.c
+         volatile.c
+         yn.c
+     1>..\..\src\yn.c(160): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+         zeta.c
+         zeta_ui.c
+         get_patches.c
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I..\..\ /I..\..\src\ /I..\..\..\mpir\lib\Win32\Release\ /Zi /nologo /W2 /WX- /Od /Oy- /GT /D WIN32 /D NDEBUG /D _LIB /D _WIN32 /D _GMP_IEEE_FLOATS /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MT /GS- /fp:strict /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\mpir+mpf+mpc\mpfr\lib\Win32\Release\mpfr.pdb" /Gd /TC /FIconfig.h /analyze- /errorReport:prompt ..\..\src\pow_si.c
+         pow_si.c
+     1>..\..\src\pow_si.c(151): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\coding\mpir+mpf+mpc\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib" ..\..\..\mpir\lib\Win32\Release\mpir.lib /NOLOGO Win32\Release\abort_prec_max.obj
+         Win32\Release\acos.obj
+         Win32\Release\acosh.obj
+         Win32\Release\add.obj
+         Win32\Release\add1.obj
+         Win32\Release\add1sp.obj
+         Win32\Release\add_d.obj
+         Win32\Release\add_ui.obj
+         Win32\Release\agm.obj
+         Win32\Release\ai.obj
+         Win32\Release\asin.obj
+         Win32\Release\asinh.obj
+         Win32\Release\atan.obj
+         Win32\Release\atan2.obj
+         Win32\Release\atanh.obj
+         Win32\Release\bernoulli.obj
+         Win32\Release\buildopt.obj
+         Win32\Release\cache.obj
+         Win32\Release\cbrt.obj
+         Win32\Release\check.obj
+         Win32\Release\clear.obj
+         Win32\Release\clears.obj
+         Win32\Release\cmp.obj
+         Win32\Release\cmp2.obj
+         Win32\Release\cmp_abs.obj
+         Win32\Release\cmp_d.obj
+         Win32\Release\cmp_ld.obj
+         Win32\Release\cmp_si.obj
+         Win32\Release\cmp_ui.obj
+         Win32\Release\comparisons.obj
+         Win32\Release\const_catalan.obj
+         Win32\Release\const_euler.obj
+         Win32\Release\const_log2.obj
+         Win32\Release\const_pi.obj
+         Win32\Release\constant.obj
+         Win32\Release\copysign.obj
+         Win32\Release\cos.obj
+         Win32\Release\cosh.obj
+         Win32\Release\cot.obj
+         Win32\Release\coth.obj
+         Win32\Release\csc.obj
+         Win32\Release\csch.obj
+         Win32\Release\d_div.obj
+         Win32\Release\d_sub.obj
+         Win32\Release\digamma.obj
+         Win32\Release\dim.obj
+         Win32\Release\div.obj
+         Win32\Release\div_2exp.obj
+         Win32\Release\div_2si.obj
+         Win32\Release\div_2ui.obj
+         Win32\Release\div_d.obj
+         Win32\Release\div_ui.obj
+         Win32\Release\dump.obj
+         Win32\Release\eint.obj
+         Win32\Release\eq.obj
+         Win32\Release\erf.obj
+         Win32\Release\erfc.obj
+         Win32\Release\exceptions.obj
+         Win32\Release\exp.obj
+         Win32\Release\exp10.obj
+         Win32\Release\exp2.obj
+         Win32\Release\exp3.obj
+         Win32\Release\exp_2.obj
+         Win32\Release\expm1.obj
+         Win32\Release\extract.obj
+         Win32\Release\factorial.obj
+         Win32\Release\fits_intmax.obj
+         Win32\Release\fits_sint.obj
+         Win32\Release\fits_slong.obj
+         Win32\Release\fits_sshort.obj
+         Win32\Release\fits_uint.obj
+         Win32\Release\fits_uintmax.obj
+         Win32\Release\fits_ulong.obj
+         Win32\Release\fits_ushort.obj
+         Win32\Release\fma.obj
+         Win32\Release\fms.obj
+         Win32\Release\frac.obj
+         Win32\Release\free_cache.obj
+         Win32\Release\frexp.obj
+         Win32\Release\gamma.obj
+         Win32\Release\gammaonethird.obj
+         Win32\Release\get_d.obj
+         Win32\Release\get_d64.obj
+         Win32\Release\get_exp.obj
+         Win32\Release\get_f.obj
+         Win32\Release\get_flt.obj
+         Win32\Release\get_ld.obj
+         Win32\Release\get_si.obj
+         Win32\Release\get_sj.obj
+         Win32\Release\get_str.obj
+         Win32\Release\get_ui.obj
+         Win32\Release\get_uj.obj
+         Win32\Release\get_z.obj
+         Win32\Release\get_z_exp.obj
+         Win32\Release\gmp_op.obj
+         Win32\Release\grandom.obj
+         Win32\Release\hypot.obj
+         Win32\Release\init.obj
+         Win32\Release\init2.obj
+         Win32\Release\inits.obj
+         Win32\Release\inits2.obj
+         Win32\Release\inp_str.obj
+         Win32\Release\int_ceil_log2.obj
+         Win32\Release\isinf.obj
+         Win32\Release\isinteger.obj
+         Win32\Release\isnan.obj
+         Win32\Release\isnum.obj
+         Win32\Release\isqrt.obj
+         Win32\Release\isregular.obj
+         Win32\Release\iszero.obj
+         Win32\Release\jn.obj
+         Win32\Release\li2.obj
+         Win32\Release\lngamma.obj
+         Win32\Release\log.obj
+         Win32\Release\log10.obj
+         Win32\Release\log1p.obj
+         Win32\Release\log2.obj
+         Win32\Release\logging.obj
+         Win32\Release\min_prec.obj
+         Win32\Release\minmax.obj
+         Win32\Release\modf.obj
+         "Win32\Release\mpfr-gmp.obj"
+         Win32\Release\mp_clz_tab.obj
+         Win32\Release\mpn_exp.obj
+         Win32\Release\mul.obj
+         Win32\Release\mul_2exp.obj
+         Win32\Release\mul_2si.obj
+         Win32\Release\mul_2ui.obj
+         Win32\Release\mul_d.obj
+         Win32\Release\mul_ui.obj
+         Win32\Release\mulders.obj
+         Win32\Release\neg.obj
+         Win32\Release\next.obj
+         Win32\Release\out_str.obj
+         Win32\Release\pow.obj
+         Win32\Release\pow_si.obj
+         Win32\Release\pow_ui.obj
+         Win32\Release\pow_z.obj
+         Win32\Release\powerof2.obj
+         Win32\Release\print_raw.obj
+         Win32\Release\print_rnd_mode.obj
+         Win32\Release\printf.obj
+         Win32\Release\rec_sqrt.obj
+         Win32\Release\reldiff.obj
+         Win32\Release\rem1.obj
+         Win32\Release\rint.obj
+         Win32\Release\root.obj
+         Win32\Release\round_near_x.obj
+         Win32\Release\round_p.obj
+         Win32\Release\round_prec.obj
+         Win32\Release\scale2.obj
+         Win32\Release\sec.obj
+         Win32\Release\sech.obj
+         Win32\Release\set.obj
+         Win32\Release\set_d.obj
+         Win32\Release\set_d64.obj
+         Win32\Release\set_dfl_prec.obj
+         Win32\Release\set_exp.obj
+         Win32\Release\set_f.obj
+         Win32\Release\set_flt.obj
+         Win32\Release\set_inf.obj
+         Win32\Release\set_ld.obj
+         Win32\Release\set_nan.obj
+         Win32\Release\set_prc_raw.obj
+         Win32\Release\set_prec.obj
+         Win32\Release\set_q.obj
+         Win32\Release\set_rnd.obj
+         Win32\Release\set_si.obj
+         Win32\Release\set_si_2exp.obj
+         Win32\Release\set_sj.obj
+         Win32\Release\set_str.obj
+         Win32\Release\set_str_raw.obj
+         Win32\Release\set_ui.obj
+         Win32\Release\set_ui_2exp.obj
+         Win32\Release\set_uj.obj
+         Win32\Release\set_z.obj
+         Win32\Release\set_zero.obj
+         Win32\Release\setmax.obj
+         Win32\Release\setmin.obj
+         Win32\Release\setsign.obj
+         Win32\Release\set_z_exp.obj
+         Win32\Release\sgn.obj
+         Win32\Release\si_op.obj
+         Win32\Release\signbit.obj
+         Win32\Release\sin.obj
+         Win32\Release\sin_cos.obj
+         Win32\Release\sinh.obj
+         Win32\Release\sinh_cosh.obj
+         Win32\Release\sqr.obj
+         Win32\Release\sqrt.obj
+         Win32\Release\sqrt_ui.obj
+         Win32\Release\stack_interface.obj
+         Win32\Release\strtofr.obj
+         Win32\Release\sub.obj
+         Win32\Release\sub1.obj
+         Win32\Release\sub1sp.obj
+         Win32\Release\sub_d.obj
+         Win32\Release\sub_ui.obj
+         Win32\Release\subnormal.obj
+         Win32\Release\sum.obj
+         Win32\Release\swap.obj
+         Win32\Release\tan.obj
+         Win32\Release\tanh.obj
+         Win32\Release\uceil_exp2.obj
+         Win32\Release\uceil_log2.obj
+         Win32\Release\ufloor_log2.obj
+         Win32\Release\ui_div.obj
+         Win32\Release\ui_pow.obj
+         Win32\Release\ui_pow_ui.obj
+         Win32\Release\ui_sub.obj
+         Win32\Release\urandom.obj
+         Win32\Release\urandomb.obj
+         Win32\Release\vasprintf.obj
+         Win32\Release\version.obj
+         Win32\Release\volatile.obj
+         Win32\Release\yn.obj
+         Win32\Release\zeta.obj
+         Win32\Release\zeta_ui.obj
+         Win32\Release\get_patches.obj
+         Replacing Win32\Release\mp_clz_tab.obj
+         Replacing Win32\Release\version.obj
+     1>mpir.lib(preinv_divrem_1.obj) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>mpir.lib(preinv_mod_1.obj) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>volatile.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>set_d64.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>logging.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>get_d64.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+         lib_mpfr.vcxproj -> D:\coding\mpir+mpf+mpc\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib
+     1>Done Building Project "d:\coding\mpir+mpf+mpc\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.02

@@ -1,12 +1,13 @@
-﻿Build started 14.02.2015 21:07:36.
-     1>Project "d:\coding\mpir+mpf+mpc\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Build target(s)).
+﻿Build started 01.04.2015 17:33:50.
+     1>Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Rebuild target(s)).
      1>PreBuildEvent:
          ..\out_copy_rename.bat ..\..\src\mpfr.h ..\..\lib\Win32\Release\ mpfr.h
          ..\out_copy_rename.bat ..\..\src\mparam_h.in ..\..\ mparam.h
          
          :VCEnd
+         copying ..\..\src\mpfr.h to ..\..\lib\Win32\Release\\mpfr.h
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I..\..\ /I..\..\src\ /I..\..\..\mpir\lib\Win32\Release\ /Zi /nologo /W2 /WX- /O2 /Oy- /GT /D WIN32 /D NDEBUG /D _LIB /D _WIN32 /D _GMP_IEEE_FLOATS /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MT /GS- /fp:strict /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\mpir+mpf+mpc\mpfr\lib\Win32\Release\mpfr.pdb" /Gd /TC /FIconfig.h /analyze- /errorReport:prompt ..\..\src\abort_prec_max.c ..\..\src\acos.c ..\..\src\acosh.c ..\..\src\add.c ..\..\src\add1.c ..\..\src\add1sp.c ..\..\src\add_d.c ..\..\src\add_ui.c ..\..\src\agm.c ..\..\src\ai.c ..\..\src\asin.c ..\..\src\asinh.c ..\..\src\atan.c ..\..\src\atan2.c ..\..\src\atanh.c ..\..\src\bernoulli.c ..\..\src\buildopt.c ..\..\src\cache.c ..\..\src\cbrt.c ..\..\src\check.c ..\..\src\clear.c ..\..\src\clears.c ..\..\src\cmp.c ..\..\src\cmp2.c ..\..\src\cmp_abs.c ..\..\src\cmp_d.c ..\..\src\cmp_ld.c ..\..\src\cmp_si.c ..\..\src\cmp_ui.c ..\..\src\comparisons.c ..\..\src\const_catalan.c ..\..\src\const_euler.c ..\..\src\const_log2.c ..\..\src\const_pi.c ..\..\src\constant.c ..\..\src\copysign.c ..\..\src\cos.c ..\..\src\cosh.c ..\..\src\cot.c ..\..\src\coth.c ..\..\src\csc.c ..\..\src\csch.c ..\..\src\d_div.c ..\..\src\d_sub.c ..\..\src\digamma.c ..\..\src\dim.c ..\..\src\div.c ..\..\src\div_2exp.c ..\..\src\div_2si.c ..\..\src\div_2ui.c ..\..\src\div_d.c ..\..\src\div_ui.c ..\..\src\dump.c ..\..\src\eint.c ..\..\src\eq.c ..\..\src\erf.c ..\..\src\erfc.c ..\..\src\exceptions.c ..\..\src\exp.c ..\..\src\exp10.c ..\..\src\exp2.c ..\..\src\exp3.c ..\..\src\exp_2.c ..\..\src\expm1.c ..\..\src\extract.c ..\..\src\factorial.c ..\..\src\fits_intmax.c ..\..\src\fits_sint.c ..\..\src\fits_slong.c ..\..\src\fits_sshort.c ..\..\src\fits_uint.c ..\..\src\fits_uintmax.c ..\..\src\fits_ulong.c ..\..\src\fits_ushort.c ..\..\src\fma.c ..\..\src\fms.c ..\..\src\frac.c ..\..\src\free_cache.c ..\..\src\frexp.c ..\..\src\gamma.c ..\..\src\gammaonethird.c ..\..\src\get_d.c ..\..\src\get_d64.c ..\..\src\get_exp.c ..\..\src\get_f.c ..\..\src\get_flt.c ..\..\src\get_ld.c ..\..\src\get_si.c ..\..\src\get_sj.c ..\..\src\get_str.c ..\..\src\get_ui.c ..\..\src\get_uj.c ..\..\src\get_z.c ..\..\src\get_z_exp.c ..\..\src\gmp_op.c ..\..\src\grandom.c ..\..\src\hypot.c ..\..\src\init.c ..\..\src\init2.c ..\..\src\inits.c ..\..\src\inits2.c ..\..\src\inp_str.c ..\..\src\int_ceil_log2.c ..\..\src\isinf.c ..\..\src\isinteger.c ..\..\src\isnan.c ..\..\src\isnum.c ..\..\src\isqrt.c ..\..\src\isregular.c ..\..\src\iszero.c ..\..\src\jn.c ..\..\src\li2.c ..\..\src\lngamma.c ..\..\src\log.c ..\..\src\log10.c ..\..\src\log1p.c ..\..\src\log2.c ..\..\src\logging.c ..\..\src\min_prec.c ..\..\src\minmax.c ..\..\src\modf.c "..\..\src\mpfr-gmp.c" ..\..\src\mp_clz_tab.c ..\..\src\mpn_exp.c ..\..\src\mul.c ..\..\src\mul_2exp.c ..\..\src\mul_2si.c ..\..\src\mul_2ui.c ..\..\src\mul_d.c ..\..\src\mul_ui.c ..\..\src\mulders.c ..\..\src\neg.c ..\..\src\next.c ..\..\src\out_str.c ..\..\src\pow.c ..\..\src\pow_ui.c ..\..\src\pow_z.c ..\..\src\powerof2.c ..\..\src\print_raw.c ..\..\src\print_rnd_mode.c ..\..\src\printf.c ..\..\src\rec_sqrt.c ..\..\src\reldiff.c ..\..\src\rem1.c ..\..\src\rint.c ..\..\src\root.c ..\..\src\round_near_x.c ..\..\src\round_p.c ..\..\src\round_prec.c ..\..\src\scale2.c ..\..\src\sec.c ..\..\src\sech.c ..\..\src\set.c ..\..\src\set_d.c ..\..\src\set_d64.c ..\..\src\set_dfl_prec.c ..\..\src\set_exp.c ..\..\src\set_f.c ..\..\src\set_flt.c ..\..\src\set_inf.c ..\..\src\set_ld.c ..\..\src\set_nan.c ..\..\src\set_prc_raw.c ..\..\src\set_prec.c ..\..\src\set_q.c ..\..\src\set_rnd.c ..\..\src\set_si.c ..\..\src\set_si_2exp.c ..\..\src\set_sj.c ..\..\src\set_str.c ..\..\src\set_str_raw.c ..\..\src\set_ui.c ..\..\src\set_ui_2exp.c ..\..\src\set_uj.c ..\..\src\set_z.c ..\..\src\set_zero.c ..\..\src\setmax.c ..\..\src\setmin.c ..\..\src\setsign.c ..\..\src\set_z_exp.c ..\..\src\sgn.c ..\..\src\si_op.c ..\..\src\signbit.c ..\..\src\sin.c ..\..\src\sin_cos.c ..\..\src\sinh.c ..\..\src\sinh_cosh.c ..\..\src\sqr.c ..\..\src\sqrt.c ..\..\src\sqrt_ui.c ..\..\src\stack_interface.c ..\..\src\strtofr.c ..\..\src\sub.c ..\..\src\sub1.c ..\..\src\sub1sp.c ..\..\src\sub_d.c ..\..\src\sub_ui.c ..\..\src\subnormal.c ..\..\src\sum.c ..\..\src\swap.c ..\..\src\tan.c ..\..\src\tanh.c ..\..\src\uceil_exp2.c ..\..\src\uceil_log2.c ..\..\src\ufloor_log2.c ..\..\src\ui_div.c ..\..\src\ui_pow.c ..\..\src\ui_pow_ui.c ..\..\src\ui_sub.c ..\..\src\urandom.c ..\..\src\urandomb.c ..\..\src\vasprintf.c ..\..\src\version.c ..\..\src\volatile.c ..\..\src\yn.c ..\..\src\zeta.c ..\..\src\zeta_ui.c ..\get_patches.c
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I..\..\ /I..\..\src\ /I..\..\..\mpir\lib\Win32\Release\ /Zi /nologo /W2 /WX- /O2 /Oy- /GT /D WIN32 /D NDEBUG /D _LIB /D _WIN32 /D _GMP_IEEE_FLOATS /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MT /GS- /fp:strict /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\lib\Win32\Release\mpfr.pdb" /Gd /TC /FIconfig.h /analyze- /errorReport:prompt ..\..\src\abort_prec_max.c ..\..\src\acos.c ..\..\src\acosh.c ..\..\src\add.c ..\..\src\add1.c ..\..\src\add1sp.c ..\..\src\add_d.c ..\..\src\add_ui.c ..\..\src\agm.c ..\..\src\ai.c ..\..\src\asin.c ..\..\src\asinh.c ..\..\src\atan.c ..\..\src\atan2.c ..\..\src\atanh.c ..\..\src\bernoulli.c ..\..\src\buildopt.c ..\..\src\cache.c ..\..\src\cbrt.c ..\..\src\check.c ..\..\src\clear.c ..\..\src\clears.c ..\..\src\cmp.c ..\..\src\cmp2.c ..\..\src\cmp_abs.c ..\..\src\cmp_d.c ..\..\src\cmp_ld.c ..\..\src\cmp_si.c ..\..\src\cmp_ui.c ..\..\src\comparisons.c ..\..\src\const_catalan.c ..\..\src\const_euler.c ..\..\src\const_log2.c ..\..\src\const_pi.c ..\..\src\constant.c ..\..\src\copysign.c ..\..\src\cos.c ..\..\src\cosh.c ..\..\src\cot.c ..\..\src\coth.c ..\..\src\csc.c ..\..\src\csch.c ..\..\src\d_div.c ..\..\src\d_sub.c ..\..\src\digamma.c ..\..\src\dim.c ..\..\src\div.c ..\..\src\div_2exp.c ..\..\src\div_2si.c ..\..\src\div_2ui.c ..\..\src\div_d.c ..\..\src\div_ui.c ..\..\src\dump.c ..\..\src\eint.c ..\..\src\eq.c ..\..\src\erf.c ..\..\src\erfc.c ..\..\src\exceptions.c ..\..\src\exp.c ..\..\src\exp10.c ..\..\src\exp2.c ..\..\src\exp3.c ..\..\src\exp_2.c ..\..\src\expm1.c ..\..\src\extract.c ..\..\src\factorial.c ..\..\src\fits_intmax.c ..\..\src\fits_sint.c ..\..\src\fits_slong.c ..\..\src\fits_sshort.c ..\..\src\fits_uint.c ..\..\src\fits_uintmax.c ..\..\src\fits_ulong.c ..\..\src\fits_ushort.c ..\..\src\fma.c ..\..\src\fms.c ..\..\src\frac.c ..\..\src\free_cache.c ..\..\src\frexp.c ..\..\src\gamma.c ..\..\src\gammaonethird.c ..\..\src\get_d.c ..\..\src\get_d64.c ..\..\src\get_exp.c ..\..\src\get_f.c ..\..\src\get_flt.c ..\..\src\get_ld.c ..\..\src\get_si.c ..\..\src\get_sj.c ..\..\src\get_str.c ..\..\src\get_ui.c ..\..\src\get_uj.c ..\..\src\get_z.c ..\..\src\get_z_exp.c ..\..\src\gmp_op.c ..\..\src\grandom.c ..\..\src\hypot.c ..\..\src\init.c ..\..\src\init2.c ..\..\src\inits.c ..\..\src\inits2.c ..\..\src\inp_str.c ..\..\src\int_ceil_log2.c ..\..\src\isinf.c ..\..\src\isinteger.c ..\..\src\isnan.c ..\..\src\isnum.c ..\..\src\isqrt.c ..\..\src\isregular.c ..\..\src\iszero.c ..\..\src\jn.c ..\..\src\li2.c ..\..\src\lngamma.c ..\..\src\log.c ..\..\src\log10.c ..\..\src\log1p.c ..\..\src\log2.c ..\..\src\logging.c ..\..\src\min_prec.c ..\..\src\minmax.c ..\..\src\modf.c "..\..\src\mpfr-gmp.c" ..\..\src\mp_clz_tab.c ..\..\src\mpn_exp.c ..\..\src\mul.c ..\..\src\mul_2exp.c ..\..\src\mul_2si.c ..\..\src\mul_2ui.c ..\..\src\mul_d.c ..\..\src\mul_ui.c ..\..\src\mulders.c ..\..\src\neg.c ..\..\src\next.c ..\..\src\out_str.c ..\..\src\pow.c ..\..\src\pow_ui.c ..\..\src\pow_z.c ..\..\src\powerof2.c ..\..\src\print_raw.c ..\..\src\print_rnd_mode.c ..\..\src\printf.c ..\..\src\rec_sqrt.c ..\..\src\reldiff.c ..\..\src\rem1.c ..\..\src\rint.c ..\..\src\root.c ..\..\src\round_near_x.c ..\..\src\round_p.c ..\..\src\round_prec.c ..\..\src\scale2.c ..\..\src\sec.c ..\..\src\sech.c ..\..\src\set.c ..\..\src\set_d.c ..\..\src\set_d64.c ..\..\src\set_dfl_prec.c ..\..\src\set_exp.c ..\..\src\set_f.c ..\..\src\set_flt.c ..\..\src\set_inf.c ..\..\src\set_ld.c ..\..\src\set_nan.c ..\..\src\set_prc_raw.c ..\..\src\set_prec.c ..\..\src\set_q.c ..\..\src\set_rnd.c ..\..\src\set_si.c ..\..\src\set_si_2exp.c ..\..\src\set_sj.c ..\..\src\set_str.c ..\..\src\set_str_raw.c ..\..\src\set_ui.c ..\..\src\set_ui_2exp.c ..\..\src\set_uj.c ..\..\src\set_z.c ..\..\src\set_zero.c ..\..\src\setmax.c ..\..\src\setmin.c ..\..\src\setsign.c ..\..\src\set_z_exp.c ..\..\src\sgn.c ..\..\src\si_op.c ..\..\src\signbit.c ..\..\src\sin.c ..\..\src\sin_cos.c ..\..\src\sinh.c ..\..\src\sinh_cosh.c ..\..\src\sqr.c ..\..\src\sqrt.c ..\..\src\sqrt_ui.c ..\..\src\stack_interface.c ..\..\src\strtofr.c ..\..\src\sub.c ..\..\src\sub1.c ..\..\src\sub1sp.c ..\..\src\sub_d.c ..\..\src\sub_ui.c ..\..\src\subnormal.c ..\..\src\sum.c ..\..\src\swap.c ..\..\src\tan.c ..\..\src\tanh.c ..\..\src\uceil_exp2.c ..\..\src\uceil_log2.c ..\..\src\ufloor_log2.c ..\..\src\ui_div.c ..\..\src\ui_pow.c ..\..\src\ui_pow_ui.c ..\..\src\ui_sub.c ..\..\src\urandom.c ..\..\src\urandomb.c ..\..\src\vasprintf.c ..\..\src\version.c ..\..\src\volatile.c ..\..\src\yn.c ..\..\src\zeta.c ..\..\src\zeta_ui.c ..\get_patches.c
          abort_prec_max.c
          acos.c
          acosh.c
@@ -92,9 +93,9 @@
          fits_intmax.c
      1>..\..\src\fits_intmax.c(65): warning C4146: unary minus operator applied to unsigned type, result still unsigned
          fits_sint.c
-     1>d:\coding\mpir+mpf+mpc\mpfr\src\fits_s.h(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\src\fits_s.h(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
          fits_slong.c
-     1>d:\coding\mpir+mpf+mpc\mpfr\src\fits_s.h(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\src\fits_s.h(61): warning C4146: unary minus operator applied to unsigned type, result still unsigned
          fits_sshort.c
          fits_uint.c
          fits_uintmax.c
@@ -253,15 +254,15 @@
          stack_interface.c
          strtofr.c
      1>..\..\src\strtofr.c(398): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(571): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(584): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(588): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(631): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(635): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(668): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(703): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(707): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\strtofr.c(782): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(573): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(586): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(590): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(633): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(637): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(670): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(705): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(709): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\strtofr.c(784): warning C4146: unary minus operator applied to unsigned type, result still unsigned
          sub.c
          sub1.c
      1>..\..\src\sub1.c(101): warning C4146: unary minus operator applied to unsigned type, result still unsigned
@@ -293,8 +294,8 @@
          vasprintf.c
      1>..\..\src\vasprintf.c(40): warning C4005: 'va_copy' : macro redefinition
                  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdarg.h(37) : see previous definition of 'va_copy'
-     1>..\..\src\vasprintf.c(1018): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-     1>..\..\src\vasprintf.c(1142): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\vasprintf.c(1022): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\vasprintf.c(1146): warning C4146: unary minus operator applied to unsigned type, result still unsigned
          version.c
          volatile.c
          yn.c
@@ -303,11 +304,11 @@
          zeta_ui.c
          get_patches.c
          Generating Code...
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I..\..\ /I..\..\src\ /I..\..\..\mpir\lib\Win32\Release\ /Zi /nologo /W2 /WX- /Od /Oy- /GT /D WIN32 /D NDEBUG /D _LIB /D _WIN32 /D _GMP_IEEE_FLOATS /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MT /GS- /fp:strict /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\mpir+mpf+mpc\mpfr\lib\Win32\Release\mpfr.pdb" /Gd /TC /FIconfig.h /analyze- /errorReport:prompt ..\..\src\pow_si.c
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\ /I..\..\ /I..\..\src\ /I..\..\..\mpir\lib\Win32\Release\ /Zi /nologo /W2 /WX- /Od /Oy- /GT /D WIN32 /D NDEBUG /D _LIB /D _WIN32 /D _GMP_IEEE_FLOATS /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MT /GS- /fp:strict /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\lib\Win32\Release\mpfr.pdb" /Gd /TC /FIconfig.h /analyze- /errorReport:prompt ..\..\src\pow_si.c
          pow_si.c
      1>..\..\src\pow_si.c(151): warning C4146: unary minus operator applied to unsigned type, result still unsigned
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\coding\mpir+mpf+mpc\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib" ..\..\..\mpir\lib\Win32\Release\mpir.lib /NOLOGO Win32\Release\abort_prec_max.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib" ..\..\..\mpir\lib\Win32\Release\mpir.lib /NOLOGO Win32\Release\abort_prec_max.obj
          Win32\Release\acos.obj
          Win32\Release\acosh.obj
          Win32\Release\add.obj
@@ -534,9 +535,9 @@
      1>set_d64.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
      1>logging.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
      1>get_d64.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-         lib_mpfr.vcxproj -> D:\coding\mpir+mpf+mpc\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib
-     1>Done Building Project "d:\coding\mpir+mpf+mpc\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" (Build target(s)).
+         lib_mpfr.vcxproj -> D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib
+     1>Done Building Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:11.02
+Time Elapsed 00:00:11.48

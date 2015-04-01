@@ -1,3 +1,3 @@
 (set libr=lib)  
-(set plat=Win32) 
+(set plat=x64) 
 (set conf=Release) 

@@ -1,2 +1,2 @@
 ^..\..\mpn\x86w\add_n.asm|..\..\mpn\x86w\p3\addmul_1.asm|..\..\mpn\x86w\p3\copyd.asm|..\..\mpn\x86w\copyi.asm|..\..\mpn\x86w\p3\divexact_1.asm|..\..\mpn\x86w\p3\divexact_by3c.asm|..\..\mpn\x86w\p3\divrem_1.asm|..\..\mpn\x86w\p3\hamdist.asm|..\..\mpn\x86w\p3\lshift.asm|..\..\mpn\x86w\p3\mod_1.asm|..\..\mpn\x86w\mod_34lsub1.asm|..\..\mpn\x86w\mul_1.asm|..\..\mpn\x86w\mul_basecase.asm|..\..\mpn\x86w\p3\popcount.asm|..\..\mpn\x86w\rshift.asm|..\..\mpn\x86w\sub_n.asm|..\..\mpn\x86w\p3\submul_1.asm|..\..\mpn\x86w\udiv_qrnnd.asm|..\..\mpn\x86w\umul_ppmm.asm
-D:\coding\mpir+mpf+mpc\mpir\build.vc12\lib_mpir_p3\Win32\Release\mpn\
+d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpir\build.vc12\lib_mpir_p3\Win32\Release\mpn\

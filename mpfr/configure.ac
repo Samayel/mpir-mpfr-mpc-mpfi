@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 
 AC_COPYRIGHT([
-Copyright 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+Copyright 1999-2015 Free Software Foundation, Inc.
 Contributed by the AriC and Caramel projects, INRIA.
 
 This file is part of the GNU MPFR Library.
@@ -23,9 +23,13 @@ http://www.gnu.org/licenses/ or write to the Free Software Foundation, Inc.,
 ])
 
 dnl Add check-news when it checks for more than 15 lines
-AC_INIT([MPFR],[3.1.2])
+AC_INIT([MPFR],[3.1.3])
 
-AM_INIT_AUTOMAKE([1.11 no-define dist-bzip2 dist-xz dist-zip])
+dnl Older Automake versions than 1.13 may still be supported, but no longer
+dnl tested, and many things have changed in 1.13. Moreover the INSTALL file
+dnl and MPFR manual assume that MPFR has been built using Automake 1.13+
+dnl (due to parallel tests, introduced by default in Automake 1.13).
+AM_INIT_AUTOMAKE([1.13 no-define dist-bzip2 dist-xz dist-zip])
 AM_MAINTAINER_MODE(enable)
 
 AC_CONFIG_MACRO_DIR([m4])
@@ -36,6 +40,14 @@ dnl be put after AC_PROG_CC; another problem is that the GMP CFLAGS
 dnl and CC check may modify the compiler.
 
 test_CFLAGS=${CFLAGS+set}
+
+dnl Check if user request its CC and CFLAGS
+if test -n "$CFLAGS" || test -n "$CC" ; then
+ user_redefine_cc=yes
+fi
+
+dnl Basic Autoconf macros. At this point, they must not make Autoconf
+dnl choose a compiler because of the CC and CFLAGS setup from gmp.h!
 
 AC_CANONICAL_HOST
 
@@ -50,14 +62,17 @@ dnl Extra arguments to configure
 unset gmp_lib_path GMP_CFLAGS GMP_CC
 AC_ARG_WITH(gmp_include,
    [  --with-gmp-include=DIR  GMP include directory ],
+   MPFR_PARSE_DIRECTORY(["$withval"],[withval])
    CPPFLAGS="$CPPFLAGS -I$withval")
 AC_ARG_WITH(gmp_lib,
    [  --with-gmp-lib=DIR      GMP lib directory ], [
+   MPFR_PARSE_DIRECTORY(["$withval"],[withval])
    LDFLAGS="$LDFLAGS -L$withval"
    gmp_lib_path="$withval"
   ])
 AC_ARG_WITH(gmp,
    [  --with-gmp=DIR          GMP install directory ], [
+   MPFR_PARSE_DIRECTORY(["$withval"],[withval])
    if test -z "$with_gmp_lib" && test -z "$with_gmp_include" ; then
       CPPFLAGS="$CPPFLAGS -I$withval/include"
       LDFLAGS="$LDFLAGS -L$withval/lib"
@@ -70,6 +85,7 @@ AC_ARG_WITH(gmp,
 AC_ARG_WITH(gmp_build,
    [  --with-gmp-build=DIR    GMP build directory (please read INSTALL file)],
    [
+   MPFR_PARSE_DIRECTORY(["$withval"],[withval])
    if test -z "$gmp_lib_path" && test -z "$with_gmp_include" ; then
       CPPFLAGS="$CPPFLAGS -I$withval -I$withval/tune"
       LDFLAGS="$LDFLAGS -L$withval -L$withval/.libs -L$withval/tune"
@@ -108,9 +124,9 @@ AC_ARG_ENABLE(gmp-internals,
 AC_ARG_ENABLE(assert,
    [  --enable-assert         enable ASSERT checking [[default=no]]],
    [ case $enableval in
-      yes) AC_DEFINE([WANT_ASSERT],1,[Want assertion]) ;;
+      yes) AC_DEFINE([MPFR_WANT_ASSERT],1,[Want assertion]) ;;
       no)  ;;
-      full) AC_DEFINE([WANT_ASSERT],2,[Want assertion]) ;;
+      full) AC_DEFINE([MPFR_WANT_ASSERT],2,[Want assertion]) ;;
       *) AC_MSG_ERROR([bad value for --enable-assert: yes, no or full]) ;;
      esac])
 AC_ARG_ENABLE(logging,
@@ -155,13 +171,12 @@ dnl
 dnl Setup CC and CFLAGS
 dnl
 
-dnl Check if user request its CC and CFLAGS
-if test -n "$CFLAGS" || test -n "$CC" ; then
- user_redefine_cc=yes
-fi
-
 dnl ********************************************************************
 dnl Check for CC and CFLAGS in gmp.h
+
+dnl Warning! The following tests must be done before Autoconf selects
+dnl a compiler. This means that some macros such as AC_PROG_CC and
+dnl AM_PROG_AR must be put after the following code.
 
 if test -z "$user_redefine_cc" && test "$cross_compiling" != yes ; then
 
@@ -176,9 +191,16 @@ if test -z "$GMP_CC$GMP_CFLAGS" ; then
    AC_MSG_CHECKING(for CC and CFLAGS in gmp.h)
    GMP_CC=__GMP_CC
    GMP_CFLAGS=__GMP_CFLAGS
-   for cpp in /lib/cpp gcc cc c99
+   # /lib/cpp under Solaris doesn't support some environment variables
+   # used by GCC, such as C_INCLUDE_PATH. If the user has set up such
+   # environment variables, he probably wants to use them. So, let us
+   # prefer cpp and gcc to /lib/cpp.
+   for cpp in cpp gcc /lib/cpp cc c99
    do
-     test $cpp = /lib/cpp || cpp="$cpp -E"
+     case $cpp in
+       *cpp*) ;;
+       *) cpp="$cpp -E" ;;
+     esac
      echo foo > conftest.c
      if $cpp $CPPFLAGS conftest.c > /dev/null 2> /dev/null ; then
        # Get CC
@@ -227,6 +249,18 @@ AC_PROG_CC
 AC_PROG_CPP
 AC_LANG(C)
 
+dnl Support unusual archivers.
+AM_PROG_AR
+
+dnl For GCC, _Decimal64 was introduced in GCC 4.3 for some targets
+dnl (note that it is not guaranteed to be available because it may
+dnl be disabled in the GCC build). See:
+dnl   https://gcc.gnu.org/gcc-4.3/changes.html
+dnl _Decimal64 is not yet defined in GCC for C++:
+dnl   https://gcc.gnu.org/bugzilla/show_bug.cgi?id=51364
+dnl _Decimal64 support is broken with GCC 4.6.3 and 4.7.2 on powerpc64
+dnl with the mode32 ABI, e.g. "-m32 -mpowerpc64 -mtune=970 -O3"; this
+dnl is detected by the x != x test below.
 AC_ARG_ENABLE(decimal-float,
    [  --enable-decimal-float  build conversion functions from/to decimal floats
                           [[default=no]]],
@@ -248,22 +282,29 @@ AC_ARG_ENABLE(decimal-float,
 #endif]])],[AC_MSG_RESULT(yes)],[AC_MSG_RESULT(no)
                   AC_MSG_ERROR([decimal float support requires _GMP_IEEE_FLOATS])])
               ],
-              [AC_MSG_ERROR([Compiler doesn't know _Decimal64; try GCC >= 4.2, configured with --enable-decimal-float]
-           )])
+              [AC_MSG_RESULT(no)
+AC_MSG_ERROR([Compiler doesn't know _Decimal64 (ISO/IEC TR 24732).
+Please use another compiler or build MPFR without --enable-decimal-float.])]
+           )
            AC_MSG_CHECKING(decimal float format)
            AC_RUN_IFELSE([AC_LANG_PROGRAM([[
 #include <stdlib.h>
 ]], [[
+volatile _Decimal64 x = 1;
 union { double d; _Decimal64 d64; } y;
+if (x != x) return 3;
 y.d64 = 1234567890123456.0dd;
 return y.d == 0.14894469406741037E-123 ? 0 :
        y.d == 0.59075095508629822E-68  ? 1 : 2;
 ]])], [AC_MSG_RESULT(DPD)
        AC_DEFINE([DPD_FORMAT],1,[])],
-      [if test "$?" != 1 ; then
-          AC_MSG_FAILURE(neither DPD nor BID)
-       fi
-       AC_MSG_RESULT(BID)],
+      [case "$?" in
+         1) AC_MSG_RESULT(BID) ;;
+         2) AC_MSG_FAILURE(neither DPD nor BID) ;;
+         3) AC_MSG_FAILURE([_Decimal64 support is broken.
+Please use another compiler or build MPFR without --enable-decimal-float.]) ;;
+         *) AC_MSG_FAILURE(internal error) ;;
+       esac],
       [AC_MSG_RESULT(assuming DPD)
        AC_DEFINE([DPD_FORMAT],1,[])])
            ;;
@@ -281,7 +322,7 @@ dnl     even when the -icc option is used (contrary to what is documented
 dnl     on the icc man page).
 dnl   * When ICC is correctly detected (__ICC macro defined), unsetting
 dnl     the GCC variable confuses libtool. See:
-dnl       http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=485421
+dnl       https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=485421
 dnl   * If need be, the gcc predefined macros __GNUC_* can be disabled
 dnl     thanks to the -no-gcc option.
 AC_MSG_CHECKING(for ICC)
@@ -298,7 +339,21 @@ error
 dnl If compiler is gcc, then use some specific flags.
 dnl But don't touch user other flags.
 if test "$test_CFLAGS" != set && test -n "$GCC"; then
-  CFLAGS="-Wall -Wmissing-prototypes -Wpointer-arith $CFLAGS"
+  CFLAGS="-Wpointer-arith $CFLAGS"
+  AC_MSG_CHECKING(whether the selected language is C++)
+  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+#if defined (__cplusplus)
+# error "C++"
+error
+#endif
+  ]], [[]])],[
+    AC_MSG_RESULT(no)
+    CFLAGS="-Wmissing-prototypes $CFLAGS"
+  ],[
+    AC_MSG_RESULT(yes)
+    CFLAGS="-Wmissing-declarations -Wno-sign-compare $CFLAGS"
+  ])
+  CFLAGS="-Wall $CFLAGS"
 fi
 
 AM_PROG_CC_C_O
@@ -357,7 +412,7 @@ dnl but it's "ar" format and cannot be used by the MS linker.  There
 dnl doesn't seem to be any GNU tool for generating or converting to .lib.
 AC_SUBST(MPFR_LDFLAGS)
 AC_SUBST(LIBMPFR_LDFLAGS)
-AC_LIBTOOL_WIN32_DLL
+LT_INIT(win32-dll)
 case $host in
   *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2*)
    AC_MSG_CHECKING(for DLL/static GMP)
@@ -387,8 +442,6 @@ error
   fi
   ;;
 esac
-dnl Finally set up LibTool
-AC_PROG_LIBTOOL
 
 
 dnl
@@ -480,6 +533,9 @@ dnl We do not set LD_LIBRARY_PATH, as it is not possible to set it just
 dnl before the test program is run, and we do not want to affect other
 dnl programs (such as the compiler), because the behavior could be
 dnl incorrect and even have security implications.
+dnl WARNING! LD_RUN_PATH is not taken into account by the GNU gold ld,
+dnl e.g. from binutils-gold 2.22-5 under Debian; see
+dnl   https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=660813
 saved_LD_RUN_PATH="$LD_RUN_PATH"
 LD_RUN_PATH="${LD_RUN_PATH:+$LD_RUN_PATH$PATH_SEPARATOR}$gmp_lib_path"
 export LD_RUN_PATH
@@ -500,6 +556,8 @@ AC_RUN_IFELSE([AC_LANG_PROGRAM([[
   return (strcmp (buffer, gmp_version) != 0) ? 1 : 0;
 ]])],
    [AC_MSG_RESULT(yes)
+    MPFR_CHECK_GMP
+    MPFR_CHECK_DBL2INT_BUG
     MPFR_CHECK_PRINTF_SPEC],
    [AC_MSG_RESULT(no)
     AC_MSG_WARN([==========================================================])
@@ -511,6 +569,12 @@ AC_RUN_IFELSE([AC_LANG_PROGRAM([[
     AC_MSG_WARN([(such as /usr/include or /usr/local/include).])
     AC_MSG_WARN([However since we can't use 'libtool' inside the configure,])
     AC_MSG_WARN([we can't be sure. See 'config.log' for details.])
+    AC_MSG_WARN([CC="$CC"])
+    AC_MSG_WARN([CFLAGS="$CFLAGS"])
+    AC_MSG_WARN([CPPFLAGS="$CPPFLAGS"])
+    AC_MSG_WARN([LDFLAGS="$LDFLAGS"])
+    AC_MSG_WARN([LIBS="$LIBS"])
+    AC_MSG_WARN([Temporary LD_RUN_PATH was "$LD_RUN_PATH".])
     AC_MSG_WARN([==========================================================])
     ],AC_MSG_RESULT([can not test])
 )

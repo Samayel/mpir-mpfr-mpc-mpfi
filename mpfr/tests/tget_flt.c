@@ -1,6 +1,6 @@
 /* Test file for mpfr_get_flt and mpfr_set_flt
 
-Copyright 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+Copyright 2009-2015 Free Software Foundation, Inc.
 Contributed by the AriC and Caramel projects, INRIA.
 
 This file is part of the GNU MPFR Library.
@@ -98,6 +98,7 @@ main (void)
       exit (1);
     }
 
+#ifdef HAVE_SIGNEDZ
   mpfr_set_ui (x, 0, MPFR_RNDN);
   mpfr_neg (x, x, MPFR_RNDN);
   f = mpfr_get_flt (x, MPFR_RNDN);
@@ -107,6 +108,7 @@ main (void)
       printf ("Error for mpfr_set_flt(mpfr_get_flt(-0))\n");
       exit (1);
     }
+#endif  /* HAVE_SIGNEDZ */
 
   mpfr_set_ui (x, 17, MPFR_RNDN);
   f = mpfr_get_flt (x, MPFR_RNDN);

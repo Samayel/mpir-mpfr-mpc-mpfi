@@ -1,4 +1,4 @@
-﻿Build started 01.04.2015 17:33:50.
+﻿Build started 20.06.2015 12:44:37.
      1>Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Rebuild target(s)).
      1>PreBuildEvent:
          ..\out_copy_rename.bat ..\..\src\mpfr.h ..\..\lib\Win32\Release\ mpfr.h
@@ -192,7 +192,7 @@
          reldiff.c
          rem1.c
          rint.c
-     1>..\..\src\rint.c(115): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>..\..\src\rint.c(119): warning C4146: unary minus operator applied to unsigned type, result still unsigned
          root.c
          round_near_x.c
      1>..\..\src\round_near_x.c(191): warning C4146: unary minus operator applied to unsigned type, result still unsigned
@@ -540,4 +540,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:11.48
+Time Elapsed 00:00:11.68

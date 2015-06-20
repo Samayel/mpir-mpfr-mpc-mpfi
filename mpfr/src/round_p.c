@@ -1,6 +1,6 @@
 /* mpfr_round_p -- check if an approximation is roundable.
 
-Copyright 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+Copyright 2005-2015 Free Software Foundation, Inc.
 Contributed by the AriC and Caramel projects, INRIA.
 
 This file is part of the GNU MPFR Library.
@@ -23,8 +23,8 @@ http://www.gnu.org/licenses/ or write to the Free Software Foundation, Inc.,
 #include "mpfr-impl.h"
 
 /* Check against mpfr_can_round? */
-#ifdef WANT_ASSERT
-# if WANT_ASSERT >= 2
+#ifdef MPFR_WANT_ASSERT
+# if MPFR_WANT_ASSERT >= 2
 int mpfr_round_p_2 (mp_limb_t *, mp_size_t, mpfr_exp_t, mpfr_prec_t);
 int
 mpfr_round_p (mp_limb_t *bp, mp_size_t bn, mpfr_exp_t err0, mpfr_prec_t prec)

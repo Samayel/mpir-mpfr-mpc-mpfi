@@ -1,7 +1,7 @@
 /* mpfr_vasprintf -- main function for the printf functions family
    plus helper macros & functions.
 
-Copyright 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+Copyright 2007-2015 Free Software Foundation, Inc.
 Contributed by the AriC and Caramel projects, INRIA.
 
 This file is part of the GNU MPFR Library.
@@ -370,7 +370,7 @@ parse_arg_type (const char *format, struct printf_spec *specinfo)
 
 /* With a C++ compiler wchar_t and enumeration in va_list are converted to
    integer type : int, unsigned int, long or unsigned long (unfortunately,
-   this is implementation dependant).
+   this is implementation dependent).
    We follow gmp which assumes in print/doprnt.c that wchar_t is converted
    to int (because wchar_t <= int).
    For wint_t, we assume that the case WINT_MAX < INT_MAX yields an
@@ -1984,7 +1984,7 @@ mpfr_vasprintf (char **ptr, const char *fmt, va_list ap)
           va_copy (ap2, ap);
           start = fmt;
 
-          /* construct format string, like "%*.*hu" "%*.*u" or "%*.*lu" */
+          /* construct format string, like "%*.*hd" "%*.*d" or "%*.*ld" */
           format[0] = '%';
           format[1] = '*';
           format[2] = '.';

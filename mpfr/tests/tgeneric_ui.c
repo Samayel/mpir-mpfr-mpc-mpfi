@@ -1,6 +1,6 @@
 /* Generic test file for functions with one mpfr_t argument and an integer.
 
-Copyright 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+Copyright 2005-2015 Free Software Foundation, Inc.
 Contributed by the AriC and Caramel projects, INRIA.
 
 This file is part of the GNU MPFR Library.
@@ -100,16 +100,14 @@ test_generic_ui (mpfr_prec_t p0, mpfr_prec_t p1, unsigned int N)
                 compare = compare + compare2;
               else
                 compare = inexact; /* cannot determine sign(t-f(x)) */
-              if (((inexact == 0) && (compare != 0)) ||
-                  ((inexact > 0) && (compare <= 0)) ||
-                  ((inexact < 0) && (compare >= 0)))
+              if (! SAME_SIGN (inexact, compare))
                 {
                   printf ("Wrong inexact flag for rnd=%s: expected %d, got %d"
                           "\n", mpfr_print_rnd_mode (rnd), compare, inexact);
-                  printf ("x="); mpfr_print_binary (x); puts ("");
-                  printf ("u=%lu", (unsigned long) u);
-                  printf ("y="); mpfr_print_binary (y); puts ("");
-                  printf ("t="); mpfr_print_binary (t); puts ("");
+                  printf ("x = "); mpfr_dump (x);
+                  printf ("u = %lu\n", (unsigned long) u);
+                  printf ("y = "); mpfr_dump (y);
+                  printf ("t = "); mpfr_dump (t);
                   exit (1);
                 }
             }

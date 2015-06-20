@@ -1,4 +1,4 @@
-# Copyright 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+# Copyright 2000-2015 Free Software Foundation, Inc.
 # This Makefile.am is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
 # with or without modifications, as long as this notice is preserved.
@@ -10,6 +10,12 @@
 
 
 AUTOMAKE_OPTIONS = gnu
+
+# ACLOCAL_AMFLAGS will be fully deprecated in Automake 2.0;
+# AC_CONFIG_MACRO_DIRS (introduced in Automake 1.13) is now used instead,
+# but we still set ACLOCAL_AMFLAGS to avoid a warning message from
+# libtoolize and in case some developer needs to switch back to an
+# old Automake version.
 ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS = doc src tests tune

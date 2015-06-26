@@ -1,4 +1,4 @@
-﻿Build started 20.06.2015 12:47:24.
+﻿Build started 26.06.2015 19:21:05.
      1>Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpc\build.vc10\mpc_lib\mpc_lib.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\mpir\lib\Win32\Release\ /I..\..\..\mpfr\src /I..\..\src /I..\ /Zi /nologo /W2 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /Gm- /EHsc /MT /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"Win32\Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\abs.c ..\..\src\acos.c ..\..\src\acosh.c ..\..\src\add.c ..\..\src\add_fr.c ..\..\src\add_si.c ..\..\src\add_ui.c ..\..\src\arg.c ..\..\src\asin.c ..\..\src\asinh.c ..\..\src\atan.c ..\..\src\atanh.c ..\..\src\clear.c ..\..\src\cmp.c ..\..\src\cmp_si_si.c ..\..\src\conj.c ..\..\src\cos.c ..\..\src\cosh.c ..\..\src\div.c ..\..\src\div_2si.c ..\..\src\div_2ui.c ..\..\src\div_fr.c ..\..\src\div_ui.c ..\..\src\exp.c ..\..\src\fma.c ..\..\src\fr_div.c ..\..\src\fr_sub.c ..\..\src\get_prec.c ..\..\src\get_prec2.c ..\..\src\get_version.c ..\..\src\get_x.c ..\..\src\imag.c ..\..\src\init2.c ..\..\src\init3.c ..\..\src\inp_str.c ..\..\src\log.c ..\..\src\log10.c ..\..\src\mem.c ..\..\src\mul.c ..\..\src\mul_2si.c ..\..\src\mul_2ui.c ..\..\src\mul_fr.c ..\..\src\mul_i.c ..\..\src\mul_si.c ..\..\src\mul_ui.c ..\..\src\neg.c ..\..\src\norm.c ..\..\src\out_str.c ..\..\src\pow.c ..\..\src\pow_d.c ..\..\src\pow_fr.c ..\..\src\pow_ld.c ..\..\src\pow_si.c ..\..\src\pow_ui.c ..\..\src\pow_z.c ..\..\src\proj.c ..\..\src\real.c ..\..\src\set.c ..\..\src\set_prec.c ..\..\src\set_str.c ..\..\src\set_x.c ..\..\src\set_x_x.c ..\..\src\sin.c ..\..\src\sinh.c ..\..\src\sin_cos.c ..\..\src\sqr.c ..\..\src\sqrt.c ..\..\src\strtoc.c ..\..\src\sub.c ..\..\src\sub_fr.c ..\..\src\sub_ui.c ..\..\src\swap.c ..\..\src\tan.c ..\..\src\tanh.c ..\..\src\uceil_log2.c ..\..\src\ui_div.c ..\..\src\ui_ui_sub.c ..\..\src\urandom.c ..\dlfcn.c
@@ -178,4 +178,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.92
+Time Elapsed 00:00:08.12

@@ -1,4 +1,4 @@
-﻿Build started 20.06.2015 12:43:47.
+﻿Build started 26.06.2015 19:18:26.
      1>Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Rebuild target(s)).
      1>PreBuildEvent:
          ..\out_copy_rename.bat ..\..\src\mpfr.h ..\..\lib\x64\Release\ mpfr.h
@@ -538,4 +538,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:11.52
+Time Elapsed 00:00:25.56

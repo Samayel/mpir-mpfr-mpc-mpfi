@@ -1,5 +1,5 @@
-﻿Build started 26.06.2015 19:12:25.
-     1>Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpir\build.vc12\lib_mpir_p3\lib_mpir_p3.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 14.11.2015 08:24:41.
+     1>Project "D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpir\build.vc12\lib_mpir_p3\lib_mpir_p3.vcxproj" on node 2 (Build target(s)).
      1>PreBuildEvent:
          cd ..\
          prebuild p3 Win32
@@ -32,7 +32,7 @@
          Assembling submul_1.asm
          Assembling udiv_qrnnd.asm
          Assembling umul_ppmm.asm
-         cmd.exe /C "C:\Users\johm\AppData\Local\Temp\tmp7379947841d240e0aeb165b67a246a9e.cmd"
+         cmd.exe /C "C:\Users\johm\AppData\Local\Temp\tmp074812cdfe6e493c93023956e829a1cd.cmd"
          "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\"vsyasm.exe -Xvc -f win32 -g cv8 -i "..\..\mpn\x86_64w\\" -o "Win32\Release\mpn\\" -rnasm -pnasm   ..\..\mpn\x86w\add_n.asm  ..\..\mpn\x86w\p3\addmul_1.asm  ..\..\mpn\x86w\p3\copyd.asm  ..\..\mpn\x86w\copyi.asm  ..\..\mpn\x86w\p3\divexact_1.asm  ..\..\mpn\x86w\p3\divexact_by3c.asm  ..\..\mpn\x86w\p3\divrem_1.asm  ..\..\mpn\x86w\p3\hamdist.asm  ..\..\mpn\x86w\p3\lshift.asm  ..\..\mpn\x86w\p3\mod_1.asm  ..\..\mpn\x86w\mod_34lsub1.asm  ..\..\mpn\x86w\mul_1.asm  ..\..\mpn\x86w\mul_basecase.asm  ..\..\mpn\x86w\p3\popcount.asm  ..\..\mpn\x86w\rshift.asm  ..\..\mpn\x86w\sub_n.asm  ..\..\mpn\x86w\p3\submul_1.asm  ..\..\mpn\x86w\udiv_qrnnd.asm  ..\..\mpn\x86w\umul_ppmm.asm
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\ /Zi /nologo /W1 /WX- /Ox /Oi /Oy- /D NDEBUG /D WIN32 /D _LIB /D HAVE_CONFIG_H /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpir\build.vc12\Win32\Release\mpir.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\assert.c ..\..\errno.c "..\..\extract-dbl.c" ..\..\invalid.c ..\..\memory.c ..\..\mp_bpl.c ..\..\mp_clz_tab.c ..\..\mp_dv_tab.c ..\..\mp_get_fns.c ..\..\mp_minv_tab.c ..\..\mp_set_fns.c ..\..\nextprime.c ..\..\primesieve.c ..\..\randbui.c ..\..\randclr.c ..\..\randdef.c ..\..\randiset.c ..\..\randlc2s.c ..\..\randlc2x.c ..\..\randmt.c ..\..\randmts.c ..\..\randmui.c ..\..\rands.c ..\..\randsd.c ..\..\randsdui.c "..\..\tal-reent.c" ..\..\version.c
@@ -1102,8 +1102,8 @@
              
          :VCEnd
          copying outputs from "Win32\Release" to "..\lib\Win32\Release"
-     1>Done Building Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpir\build.vc12\lib_mpir_p3\lib_mpir_p3.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpir\build.vc12\lib_mpir_p3\lib_mpir_p3.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:59.83
+Time Elapsed 00:00:15.20

@@ -1,5 +1,5 @@
-﻿Build started 26.06.2015 19:16:33.
-     1>Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 14.11.2015 08:40:43.
+     1>Project "D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" on node 2 (Rebuild target(s)).
      1>PreBuildEvent:
          ..\out_copy_rename.bat ..\..\src\mpfr.h ..\..\lib\Win32\Release\ mpfr.h
          ..\out_copy_rename.bat ..\..\src\mparam_h.in ..\..\ mparam.h
@@ -536,8 +536,8 @@
      1>logging.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
      1>get_d64.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
          lib_mpfr.vcxproj -> D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\..\lib\Win32\Release\mpfr.lib
-     1>Done Building Project "d:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "D:\coding\_github.samayel\mpir-mpfr-mpc-mpfi\mpfr\build.vc10\lib_mpfr\lib_mpfr.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:37.38
+Time Elapsed 00:00:08.38
